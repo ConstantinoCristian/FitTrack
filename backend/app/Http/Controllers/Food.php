@@ -21,7 +21,7 @@ class Food extends Controller
 
         // Fetch API response
         $apiResponse = Http::withHeaders([
-            "X-Api-Key" => "Z/NymnHbbYFv4MIny0emtw==nyU7JNc2r7neabBd"
+            "X-Api-Key" => env("API_KEY")
         ])->get("https://api.calorieninjas.com/v1/nutrition", [
             "query" => $food
         ]);
